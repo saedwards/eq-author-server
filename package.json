@@ -1,0 +1,13 @@
+{
+  "name": "eq-author-server",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node slack-server.js"
+  },
+  "devDependencies": {
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2"
+  },
+  "dependencies": {
+  }
+}
