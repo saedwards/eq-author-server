@@ -7,6 +7,8 @@ let ejs = require("ejs");
 const url = process.env.SLACK_WEBHOOK_URL;
 const IncomingWebhook = require("@slack/client").IncomingWebhook;
 
+console.log(url);
+
 const webhook = new IncomingWebhook(url);
 
 app.set("port", process.env.PORT || 8050);
