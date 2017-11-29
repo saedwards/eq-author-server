@@ -1,8 +1,8 @@
 // Set up Express server
-let express = require("express");
-let app = express();
-let bodyParser = require("body-parser");
-let ejs = require("ejs");
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
+var ejs = require("ejs");
 
 const url = process.env.SLACK_WEBHOOK_URL;
 const IncomingWebhook = require("@slack/client").IncomingWebhook;
@@ -16,7 +16,7 @@ app.set("view engine", "html");
 app.set("views", "src");
 app.engine("html", ejs.renderFile);
 
-let staticFolder = ".";
+var staticFolder = ".";
 app.use(express.static(staticFolder));
 app.use(bodyParser.json());
 app.use(
@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-let server = app.listen(app.get("port"), function () {
+var server = app.listen(app.get("port"), function () {
   console.log(
     "Express server running on http://localhost:" + server.address().port
   );
